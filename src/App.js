@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Home from "./components/Home";
+import Navbar from "./components/Navbar";
+import { ThemeProvider } from "./context/ThemeContext";
+import About from "./components/About";
+import Skills from "./components/Skills";
+import Experience from "./components/Experience";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import { Toaster } from "react-hot-toast";
+import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
+import Cursor from "./components/Cursor";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider>
+      <Cursor />
+      <Toaster position="bottom-center" />
+      <main className="bg-white text-black dark:bg-black dark:text-white">
+        <Navbar />
+        <Home />
+        <About />
+        <Skills />
+        <Experience />
+        <Projects />
+        <Contact />
+        <Footer />
+        <ScrollToTop />
+      </main>
+    </ThemeProvider>
   );
 }
 
