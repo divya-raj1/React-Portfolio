@@ -10,12 +10,12 @@ import Contact from "./components/Contact";
 import { Toaster } from "react-hot-toast";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
-import Cursor from "./components/Cursor";
+// import Cursor from "./components/Cursor";
 
 function App() {
   return (
     <ThemeProvider>
-      <Cursor />
+      {/* <Cursor /> */}
       <Toaster position="bottom-center" />
       <main className="bg-white text-black dark:bg-black dark:text-white">
         <Navbar />

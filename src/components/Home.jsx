@@ -63,12 +63,18 @@ const Home = () => {
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 0.4, duration: 0.8 }}
       >
-        <div className="relative w-74 h-74 sm:w-72 sm:h-72 rounded-full overflow-hidden border-4 border-blue-500 shadow-xl">
-          <img
-            src={profileImg}
-            alt="Divya Raj"
-            className="w-full h-full object-cover"
-          />
+        <div className="relative group">
+          {/* Outer glow ring for large screens only */}
+          <div className="hidden lg:block absolute inset-0 animate-pulse rounded-full border-2 border-blue-400 blur-[6px] opacity-30 group-hover:opacity-50 transition duration-300" />
+
+          {/* Profile Image */}
+          <div className="relative w-72 h-72 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-[26rem] lg:h-[26rem] rounded-full overflow-hidden border-4 border-blue-500 shadow-2xl group-hover:shadow-blue-500/50 transition-all duration-500">
+            <img
+              src={profileImg}
+              alt="Divya Raj"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+          </div>
         </div>
       </motion.div>
     </section>

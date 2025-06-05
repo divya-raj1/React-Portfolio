@@ -30,6 +30,10 @@ const skills = [
   { name: "Jest", icon: <SiJest /> },
   { name: "Webpack", icon: <SiWebpack /> },
   { name: "VS Code", icon: <TbBrandVscode /> },
+  { name: "jQuery", icon: <span className="text-xl font-bold">JQ</span> },
+  { name: "Web3", icon: <span className="text-xl font-bold">W3</span> },
+  { name: "Material UI", icon: <span className="text-xl font-bold">MUI</span> },
+  { name: "WebSockets", icon: <span className="text-xl font-bold">WS</span> },
 ];
 
 const Skills = () => {
@@ -55,17 +59,24 @@ const Skills = () => {
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
           {skills.map((skill, index) => (
             <motion.div
-              key={index}
-              className="flex flex-col items-center p-4 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md hover:scale-105 transition-transform"
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.05 }}
+                key={index}
+                className="flex flex-col items-center p-4 rounded-lg 
+                    bg-gray-100 dark:bg-gray-800 
+                    hover:bg-blue-100 dark:hover:bg-blue-900 
+                    shadow-md dark:shadow-[0_4px_20px_rgba(0,0,0,0.6)] 
+                    hover:shadow-lg dark:hover:shadow-[0_6px_24px_rgba(0,0,0,0.8)] 
+                    hover:scale-105 transition-all duration-300 ease-in-out"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.05 }}
             >
-              <div className="text-4xl text-blue-500 mb-2">
-                {skill.icon || skill.name.charAt(0)}
-              </div>
-              <p className="text-center text-sm font-medium">{skill.name}</p>
+                <div className="text-4xl text-blue-500 mb-2">
+                    {skill.icon || skill.name.charAt(0)}
+                </div>
+                <p className="text-center text-sm font-medium">
+                    {skill.name}
+                </p>
             </motion.div>
           ))}
         </div>

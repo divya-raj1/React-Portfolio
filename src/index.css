@@ -9,12 +9,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  cursor: none;
+  /* cursor: none; */
 }
 
-:hover {
-  cursor: none;
-}
+/* :hover { */
+  /* cursor: none;
+} */
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
